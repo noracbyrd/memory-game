@@ -1,10 +1,11 @@
 import React from "react";
 import "./style.css";
 
-function Picture () {
+function Picture (props) {
+    console.log(props.pictures[0].image)
     return (
         <div>
-            there will be 12 of these
+            {props.pictures.map(picture => (<li><img alt={picture.name}src={picture.image}></img></li>))}
         </div>
     )
 }

@@ -6,13 +6,14 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import PictureContainer from "./components/PictureContainer";
+import pictures from "./pictures.json"
 
 function App() {
   return (
       <div>
         <Navbar />
         <Header />
-        <PictureContainer />
+        <PictureContainer pictures={pictures}/>
       </div>
   );
 }

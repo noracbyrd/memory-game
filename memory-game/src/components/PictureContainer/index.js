@@ -3,10 +3,12 @@ import React from "react";
 import "./style.css";
 import Picture from "../Picture"
 
-function PictureContainer () {
+function PictureContainer (props) {
     return (
         <div>
-            Pictures go here
+            <ul>
+                <Picture pictures={props.pictures}/>
+            </ul>
         </div>
     )
 }
