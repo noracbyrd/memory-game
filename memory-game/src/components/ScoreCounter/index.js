@@ -1,10 +1,13 @@
 import React from "react";
 import "./style.css";
 
-function ScoreCounter () {
+function ScoreCounter (props) {
     return (
         <div>
-            this is where the score counter will go
+            <ul>
+                <li>Current Score: {props.scoreCounter}</li>
+                <li>Top Score: {props.topScore}</li>
+            </ul>
         </div>
     )
 }

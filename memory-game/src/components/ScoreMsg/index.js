@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 
-function ScoreMsg () {
+function ScoreMsg (props) {
     return (
         <div>
-            this will display if you guess a good picture or bad one
+            {props.scoreMsg}
         </div>
     )
 }

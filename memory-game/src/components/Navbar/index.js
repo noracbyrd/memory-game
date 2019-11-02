@@ -4,7 +4,7 @@ import "./style.css";
 import ScoreCounter from "../ScoreCounter";
 import ScoreMsg from "../ScoreMsg";
 
-function Navbar () {
+function Navbar (props) {
     return (
         <nav>
         <div className="nav-wrapper">
@@ -13,14 +13,10 @@ function Navbar () {
             <a href="#" className="brand-logo">Memory Clicky Game</a>
                 </div>
                 <div className="col navtext s4">
-                    <ScoreMsg>
-                        Score message 
-                        </ScoreMsg>
+                    <ScoreMsg scoreMsg={props.scoreMsg}/>
                 </div>
                 <div className="col navtext s4">
-                    <ScoreCounter>
-                        Score counter
-                    </ScoreCounter>
+                    <ScoreCounter scoreCounter={props.scoreCounter} topScore={props.topScore}/>
                 </div>
             </div>
         </div>

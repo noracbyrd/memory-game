@@ -1,21 +1,44 @@
-import React from "react";
-// import { BrowserRouter as Router, Route } from "react-router-dom";
-// import Discover from "./pages/Discover";
-// import About from "./pages/About";
-// import Search from "./pages/Search";
+import React, { Component }  from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import PictureContainer from "./components/PictureContainer";
 import pictures from "./pictures.json"
 
-function App() {
+class App extends Component {
+  state = {
+    scoreMsg: "",
+    scoreCounter: 0,
+    topScore: 0,
+    error: ""
+  }
+
+  handlePictureClick = click => {
+
+  }
+
+  handleScore = () => {
+
+  }
+
+  handleTopScore = () => {
+
+  }
+
+  handleScoreMsg = () => {
+
+  }
+
+  render () {
   return (
       <div>
-        <Navbar />
+        <Navbar scoreMsg={this.state.scoreMsg} scoreCounter={this.state.scoreCounter} topScore={this.state.topScore}/>
         <Header />
         <PictureContainer pictures={pictures}/>
       </div>
   );
+  }
 }
 
 export default App;
+
+
