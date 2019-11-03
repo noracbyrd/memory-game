@@ -7,7 +7,7 @@ function PictureContainer (props) {
     return (
         <div>
             <ul>
-                <Picture onClick={props.handlePictureClick} pictures={props.pictures} pictureID={props}/>
+                <Picture onClick={props.handlePictureClick} pictures={props.pictures} pictureid={props} clicked={props.clicked}/>
             </ul>
         </div>
     )
