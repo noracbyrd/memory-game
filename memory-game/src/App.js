@@ -15,7 +15,13 @@ class App extends Component {
     // pictures, once clicked, are added to the clickedPictures array, so that we can compare what's been clicked with what hasn't been clicked
     clickedPictures: [],
     // each image also needs to have a boolean to say, yes this has been clicked or no, it hasn't
-    clicked: false
+    clicked: false,
+    pictures: pictures,
+  }
+
+  //from javascript.info
+  shuffle = array => {
+    array.sort(() => Math.random() - 0.5);
   }
 
   handlePictureClick = click => {
@@ -45,8 +51,8 @@ class App extends Component {
         newState.scoreCounter = this.state.scoreCounter + 1;
         newState.pictureid = pictureid;
         newState.topScore = newState.scoreCounter;
+        newState.pictures = this.shuffle(pictures)
       }
-
       else {
         this.state.clickedPictures.push(pictureid);
         newState.clickedPictures = this.state.clickedPictures;
@@ -54,22 +60,13 @@ class App extends Component {
         newState.scoreMsg = "Good job, you didn't have that one yet!";
         newState.scoreCounter = this.state.scoreCounter + 1;
         newState.pictureid = pictureid;
+        newState.pictures = this.shuffle(pictures)
       }
     }
     this.setState(newState);
     // console.log(newState);
     console.log(this.state);
   }
-
-
-
-
-
-
-
-
-
-
 
   render() {
     return (
