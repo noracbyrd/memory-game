@@ -36,11 +36,13 @@ class App extends Component {
         newState.topScore = this.state.scoreCounter;
         newState.scoreCounter = 0;
         newState.scoreMsg = "Sorry, you already clicked that one! Starting over..."
+        newState.pictures = this.shuffle(pictures);
       }
       else {
         newState.clickedPictures = [];
         newState.scoreCounter = 0;
-        newState.scoreMsg = "Sorry, you already clicked that one! Starting over..."
+        newState.scoreMsg = "Sorry, you already clicked that one! Starting over...";
+        newState.pictures = this.shuffle(pictures);
       }
     } else {
       if (this.state.scoreCounter >= this.state.topScore) {
